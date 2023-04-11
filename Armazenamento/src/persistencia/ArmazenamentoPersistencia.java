@@ -13,7 +13,7 @@ public class ArmazenamentoPersistencia {
 
     public static Armazenamento buscar(Armazenamento armazenamento) {
         for(Armazenamento item: armazenar) {
-            if(item.getTipoDispo().equals(armazenamento.getTipoDispo())) {
+            if(item.getTipoDispo().equals(armazenamento.getTipoDispo())) { // equals compara Strings
                 return item;
             }
         }
@@ -25,6 +25,7 @@ public class ArmazenamentoPersistencia {
         for(Armazenamento item: armazenar) {
             if(item.getTipoDispo().equals(armazenamento.getTipoDispo())) {
                 armazenar.set(i, armazenamento);
+                  return; //com o return o método retorna qnd encontra, p nao percorrer o array inteiro sem necessidade
             }
             i++;
         }
